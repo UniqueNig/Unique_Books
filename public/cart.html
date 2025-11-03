@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Books - Your Online Bookstore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add to <head> in index.html -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <!-- Add Animate.css for amazing animations in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-book-open me-2"></i>Unique Books
+        </a>
+
+        <!-- Toggler (moved here for right alignment) -->
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Books Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="booksDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Non-Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Science Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fantasy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Mystery</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Biography</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right Nav Icons -->
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="search.html"
+                ><i class="fas fa-search"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="badge badge-secondary rounded-pill cart-count"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="account.html">My Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="orders.html">My Orders</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="display-5 fw-bold">Shopping Cart</h1>
+            <p class="lead">Review your items and proceed to checkout</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="products.html" class="continue-shopping">
+              <i class="fas fa-arrow-left me-2"></i> Continue Shopping
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+          <div class="cart-container">
+            <div class="cart-header">
+              <h2 class="cart-title">Your Cart Items</h2>
+              <div class="cart-item-count">
+                <span class="badge badge-secondary rounded-pill cart-count"
+                  >0</span
+                >
+                Items
+              </div>
+            </div>
+
+            <!-- Cart Item 1 -->
+            <!-- <div class="cart-item book-card">
+              <img
+                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="The Silent Patient"
+                class="cart-item-image"
+              />
+              <div class="cart-item-details">
+                <h3 class="cart-item-title productName" id="productName"></h3>
+                <p class="cart-item-author">by Alex Michaelides</p>
+                <div class="cart-item-price productPrice" id="productPrice">
+                  $12.99 <span class="cart-item-old-price">$16.99</span>
+                </div>
+                <div class="quantity-selector">
+                  <button class="quantity-btn decrease-btn" data-id="1">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="quantity-input"
+                    value="1"
+                    data-id="1"
+                  />
+                  <button class="quantity-btn increase-btn" data-id="1">
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="cart-item-actions">
+                <button class="remove-btn"  data-id="1">
+                  <i class="fas fa-trash"></i> Remove
+                </button>
+                <button class="save-later-btn" data-id="1">
+                  <i class="fas fa-bookmark"></i> Save for Later
+                </button>
+              </div>
+            </div> -->
+
+            <div id="cartContainer" class="cart-list"></div>
+
+
+
+          </div>
+
+          <!-- Saved for Later Section -->
+          <div class="saved-items">
+            <h3 class="saved-title">Saved For Later (2 items)</h3>
+
+            <!-- Saved Item 1 -->
+            <div class="saved-item">
+              <img
+                src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Atomic Habits"
+                class="saved-item-image"
+              />
+              <div class="saved-item-details">
+                <h4 class="saved-item-title">Atomic Habits</h4>
+                <p class="saved-item-author">by James Clear</p>
+                <div class="saved-item-price">$11.99</div>
+              </div>
+              <div class="saved-item-actions">
+                <button class="move-to-cart-btn" data-id="5">
+                  Move to Cart
+                </button>
+                <button class="remove-saved-btn" data-id="5">Remove</button>
+              </div>
+            </div>
+
+            <!-- Saved Item 2 -->
+            <div class="saved-item">
+              <img
+                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Educated"
+                class="saved-item-image"
+              />
+              <div class="saved-item-details">
+                <h4 class="saved-item-title">Educated</h4>
+                <p class="saved-item-author">by Tara Westover</p>
+                <div class="saved-item-price">$13.49</div>
+              </div>
+              <div class="saved-item-actions">
+                <button class="move-to-cart-btn" data-id="6">
+                  Move to Cart
+                </button>
+                <button class="remove-saved-btn" data-id="6">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+          <div class="cart-summary">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <div class="summary-row">
+              <span class="summary-label">Subtotal (3 items)</span>
+              <span class="summary-value" id="subtotal">$55.46</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Shipping</span>
+              <span class="summary-value" id="shipping">$3.99</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Tax</span>
+              <span class="summary-value" id="tax">$4.43</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Discount</span>
+              <span class="summary-value text-success" id="discount"
+                >-$4.00</span
+              >
+            </div>
+
+            <div class="summary-row summary-total">
+              <span>Total</span>
+              <span id="total">$59.88</span>
+            </div>
+            <a href="checkout.html">
+              <button class="btn btn-secondary" id="checkout-btn">
+                <i class="fas fa-lock me-2"></i>Proceed to Checkout
+              </button>
+            </a>
+
+            <button class="btn btn-outline-primary">
+              <i class="fas fa-credit-card me-2"></i>Pay with PayPal
+            </button>
+
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+              <h4 class="promo-title">Promo Code</h4>
+              <div class="promo-input-group">
+                <input
+                  type="text"
+                  class="promo-input"
+                  placeholder="Enter code"
+                />
+                <button class="promo-btn">Apply</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Badges -->
+          <div class="text-center mt-4">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+              <i class="fas fa-shield-alt fa-2x text-primary"></i>
+              <i class="fas fa-lock fa-2x text-primary"></i>
+              <i class="fas fa-truck fa-2x text-primary"></i>
+            </div>
+            <p class="small text-muted">
+              Secure checkout · Free returns · Fast shipping
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5><i class="fas fa-book-open me-2"></i>Unique Books</h5>
+            <p>
+              Your trusted online bookstore with thousands of titles across all
+              genres. We're passionate about connecting readers with their next
+              favorite book.
+            </p>
+            <div class="social-links">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="products.html" class="text-white-50">Books</a></li>
+              <li><a href="about.html" class="text-white-50">About Us</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Customer Care</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="faq.html" class="text-white-50">FAQ</a></li>
+              <li>
+                <a href="shipping.html" class="text-white-50">Shipping Info</a>
+              </li>
+              <li><a href="returns.html" class="text-white-50">Returns</a></li>
+              <li>
+                <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Book Street,
+                Abeokuta, Nigeria
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-phone me-2"></i> +234 813-4879-924
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-envelope me-2"></i> info@uniquebooks.com
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Unique Books. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end payment">
+            <img
+              src="https://i.pinimg.com/736x/de/72/b5/de72b5cd21b9c827639853f666b51b50.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/1200x/79/77/9f/79779f77d2a5aa5eca98d313c10c7f0e.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/b4/ef/fdb4efb9ec1f26dd2fac539282074f6f.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cart.js"></script>
+  </body>
+</html>

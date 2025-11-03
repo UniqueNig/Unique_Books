@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Books - Your Online Bookstore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add to <head> in index.html -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <!-- Add Animate.css for amazing animations in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-book-open me-2"></i>Unique Books
+        </a>
+
+        <!-- Toggler (moved here for right alignment) -->
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Books Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="booksDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Non-Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Science Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fantasy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Mystery</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Biography</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right Nav Icons -->
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="search.html"
+                ><i class="fas fa-search"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="badge badge-secondary rounded-pill cart-count"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="account.html">My Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="orders.html">My Orders</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-5 fw-bold">Checkout</h1>
+                    <p class="lead">Complete your purchase securely</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="cart.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i> Back to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container checkout-container">
+        <div class="row">
+            <!-- Checkout Forms -->
+            <div class="col-lg-8">
+                <!-- Progress Steps -->
+                <div class="checkout-progress">
+                    <div class="progress-steps">
+                        <div class="progress-bar-active"></div>
+                        <div class="step completed">
+                            <div class="step-icon">1</div>
+                            <div class="step-label">Shipping</div>
+                        </div>
+                        <div class="step active">
+                            <div class="step-icon">2</div>
+                            <div class="step-label">Payment</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">3</div>
+                            <div class="step-label">Review</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shipping Information Form -->
+                <div class="checkout-form-section form-section active" id="shipping-section">
+                    <h2 class="section-title">Shipping Information</h2>
+                    <form id="shipping-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="shipping-firstName" required value="Sarah">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="shipping-lastName" required value="Johnson">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shipping-address" class="form-label">Street Address *</label>
+                            <input type="text" class="form-control" id="shipping-address" required value="123 Book Street">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-city" class="form-label">City *</label>
+                                <input type="text" class="form-control" id="shipping-city" required value="Literary City">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-state" class="form-label">State *</label>
+                                <select class="form-control" id="shipping-state" required>
+                                    <option value="">Select State</option>
+                                    <option value="CA" selected>California</option>
+                                    <option value="NY">New York</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="FL">Florida</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-zip" class="form-label">ZIP Code *</label>
+                                <input type="text" class="form-control" id="shipping-zip" required value="12345">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-country" class="form-label">Country *</label>
+                                <select class="form-control" id="shipping-country" required>
+                                    <option value="US" selected>United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="shipping-email" required value="sarah.johnson@example.com">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="shipping-phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="shipping-phone" required value="(123) 456-7890">
+                            </div>
+                        </div>
+                        
+                        <!-- Shipping Methods -->
+                        <h3 class="section-title mt-4">Shipping Method</h3>
+                        <div class="shipping-methods">
+                            <div class="shipping-method selected" data-method="standard">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="shippingMethod" id="standardShipping" checked>
+                                    <label class="form-check-label fw-bold" for="standardShipping">
+                                        Standard Shipping
+                                    </label>
+                                </div>
+                                <p class="mb-0 text-muted">Delivery in 3-5 business days</p>
+                                <p class="mb-0 fw-bold">$3.99</p>
+                            </div>
+                            <div class="shipping-method" data-method="express">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="shippingMethod" id="expressShipping">
+                                    <label class="form-check-label fw-bold" for="expressShipping">
+                                        Express Shipping
+                                    </label>
+                                </div>
+                                <p class="mb-0 text-muted">Delivery in 2 business days</p>
+                                <p class="mb-0 fw-bold">$9.99</p>
+                            </div>
+                            <div class="shipping-method" data-method="overnight">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="shippingMethod" id="overnightShipping">
+                                    <label class="form-check-label fw-bold" for="overnightShipping">
+                                        Overnight Shipping
+                                    </label>
+                                </div>
+                                <p class="mb-0 text-muted">Delivery by tomorrow</p>
+                                <p class="mb-0 fw-bold">$19.99</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-primary" id="continue-to-payment">
+                                Continue to Payment <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Payment Information Form -->
+                <div class="checkout-form-section form-section" id="payment-section">
+                    <h2 class="section-title">Payment Information</h2>
+                    
+                    <!-- Billing Address -->
+                    <div class="mb-4">
+                        <h4 class="mb-3">Billing Address</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sameAsShipping" checked>
+                            <label class="form-check-label fw-bold" for="sameAsShipping">
+                                Same as shipping address
+                            </label>
+                        </div>
+                        
+                        <div class="same-as-shipping" id="billing-address-fields" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="billing-firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="billing-lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="billing-address" class="form-label">Street Address *</label>
+                                <input type="text" class="form-control" id="billing-address" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-city" class="form-label">City *</label>
+                                    <input type="text" class="form-control" id="billing-city" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-state" class="form-label">State *</label>
+                                    <select class="form-control" id="billing-state" required>
+                                        <option value="">Select State</option>
+                                        <option value="CA">California</option>
+                                        <option value="NY">New York</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="FL">Florida</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-zip" class="form-label">ZIP Code *</label>
+                                    <input type="text" class="form-control" id="billing-zip" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="billing-country" class="form-label">Country *</label>
+                                    <select class="form-control" id="billing-country" required>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <h4 class="mb-3">Payment Method</h4>
+                    <div class="payment-methods">
+                        <div class="payment-method selected" data-method="credit">
+                            <div class="payment-icon">
+                                <i class="far fa-credit-card"></i>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                <label class="form-check-label fw-bold" for="creditCard">
+                                    Credit Card
+                                </label>
+                            </div>
+                        </div>
+                        <div class="payment-method" data-method="paypal">
+                            <div class="payment-icon">
+                                <i class="fab fa-paypal"></i>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label fw-bold" for="paypal">
+                                    PayPal
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Credit Card Form -->
+                    <div id="credit-card-form">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="cardNumber" class="form-label">Card Number *</label>
+                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cardName" class="form-label">Name on Card *</label>
+                                <input type="text" class="form-control" id="cardName" placeholder="Sarah Johnson" required>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="cardExpiry" class="form-label">Expiry Date *</label>
+                                <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="cardCVC" class="form-label">CVC *</label>
+                                <input type="text" class="form-control" id="cardCVC" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PayPal Form (Hidden by Default) -->
+                    <div id="paypal-form" style="display: none;">
+                        <div class="alert alert-info">
+                            <p>You will be redirected to PayPal to complete your payment after reviewing your order.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary" id="back-to-shipping">
+                            <i class="fas fa-arrow-left me-2"></i> Back to Shipping
+                        </button>
+                        <button type="button" class="btn btn-primary" id="continue-to-review">
+                            Continue to Review <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Review Order Section -->
+                <div class="checkout-form-section form-section" id="review-section">
+                    <h2 class="section-title">Review Your Order</h2>
+                    
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>Almost there!</strong> Please review your order details before completing your purchase.
+                    </div>
+                    
+                    <!-- Order Summary -->
+                    <div class="mb-4">
+                        <h4 class="mb-3">Order Summary</h4>
+                        <div class="order-items">
+                            <!-- Order items would be dynamically loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Information Review -->
+                    <div class="mb-4">
+                        <h4 class="mb-3">Shipping Information</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="mb-1" id="review-shipping-name">Sarah Johnson</p>
+                                <p class="mb-1" id="review-shipping-address">123 Book Street</p>
+                                <p class="mb-1" id="review-shipping-city">Literary City, CA 12345</p>
+                                <p class="mb-1" id="review-shipping-email">sarah.johnson@example.com</p>
+                                <p class="mb-0" id="review-shipping-phone">(123) 456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Information Review -->
+                    <div class="mb-4">
+                        <h4 class="mb-3">Payment Information</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="mb-1" id="review-payment-method">Credit Card ending in 3456</p>
+                                <p class="mb-0" id="review-billing-address">Same as shipping address</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary" id="back-to-payment">
+                            <i class="fas fa-arrow-left me-2"></i> Back to Payment
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="place-order">
+                            <i class="fas fa-lock me-2"></i> Place Your Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Order Summary Sidebar -->
+            <div class="col-lg-4">
+                <div class="order-summary">
+                    <h3 class="section-title">Order Summary</h3>
+                    
+                    <div class="order-items">
+                        <!-- Order Item 1 -->
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="The Silent Patient" class="order-item-image">
+                            <div class="order-item-details">
+                                <h5 class="order-item-title">The Silent Patient</h5>
+                                <p class="order-item-author">Alex Michaelides</p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="order-item-price">$12.99</span>
+                                    <span class="order-item-quantity">Qty: 1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Order Item 2 -->
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="Where the Crawdads Sing" class="order-item-image">
+                            <div class="order-item-details">
+                                <h5 class="order-item-title">Where the Crawdads Sing</h5>
+                                <p class="order-item-author">Delia Owens</p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="order-item-price">$14.99</span>
+                                    <span class="order-item-quantity">Qty: 2</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Order Item 3 -->
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="The Midnight Library" class="order-item-image">
+                            <div class="order-item-details">
+                                <h5 class="order-item-title">The Midnight Library</h5>
+                                <p class="order-item-author">Matt Haig</p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="order-item-price">$13.49</span>
+                                    <span class="order-item-quantity">Qty: 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal (4 items)</span>
+                        <span class="summary-value" id="summary-subtotal">$55.46</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Shipping</span>
+                        <span class="summary-value" id="summary-shipping">$3.99</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Tax</span>
+                        <span class="summary-value" id="summary-tax">$4.43</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Discount</span>
+                        <span class="summary-value text-success" id="summary-discount">-$4.00</span>
+                    </div>
+                    
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="summary-total">$59.88</span>
+                    </div>
+                    
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <div class="security-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="security-text">Secure Checkout</div>
+                        </div>
+                        <div class="security-badge">
+                            <div class="security-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="security-text">SSL Encrypted</div>
+                        </div>
+                        <div class="security-badge">
+                            <div class="security-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="security-text">Privacy Protected</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5><i class="fas fa-book-open me-2"></i>Unique Books</h5>
+            <p>
+              Your trusted online bookstore with thousands of titles across all
+              genres. We're passionate about connecting readers with their next
+              favorite book.
+            </p>
+            <div class="social-links">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="products.html" class="text-white-50">Books</a></li>
+              <li><a href="about.html" class="text-white-50">About Us</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Customer Care</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="faq.html" class="text-white-50">FAQ</a></li>
+              <li>
+                <a href="shipping.html" class="text-white-50">Shipping Info</a>
+              </li>
+              <li><a href="returns.html" class="text-white-50">Returns</a></li>
+              <li>
+                <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Book Street,
+                Abeokuta, Nigeria
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-phone me-2"></i> +234 813-4879-924
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-envelope me-2"></i> info@uniquebooks.com
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Unique Books. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end payment">
+            <img
+              src="https://i.pinimg.com/736x/de/72/b5/de72b5cd21b9c827639853f666b51b50.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/1200x/79/77/9f/79779f77d2a5aa5eca98d313c10c7f0e.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/b4/ef/fdb4efb9ec1f26dd2fac539282074f6f.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

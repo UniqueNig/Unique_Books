@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Books - Your Online Bookstore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add to <head> in index.html -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <!-- Add Animate.css for amazing animations in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-book-open me-2"></i>Unique Books
+        </a>
+
+        <!-- Toggler (moved here for right alignment) -->
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Books Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="booksDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Non-Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Science Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fantasy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Mystery</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Biography</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right Nav Icons -->
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="search.html"
+                ><i class="fas fa-search"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="badge badge-secondary rounded-pill cart-count"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="account.html">My Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="orders.html">My Orders</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Story</h1>
+            <p class="page-subtitle">For over two decades, Unique Books has been more than just a bookstore - we're a community hub where stories come to life and readers find their next adventure.</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <div class="container section">
+        <div class="story-section">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Unique Books Store" class="story-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">From Humble Beginnings</h2>
+                    <p>Unique Books began in 1998 as a small, independent bookstore in the heart of Literary City. Founded by Sarah and Michael Johnson, two literature enthusiasts with a dream to create a space where book lovers could gather, discover new authors, and share their passion for reading.</p>
+                    <p>What started as a 500-square-foot shop with just 2,000 titles has grown into a beloved community institution with over 50,000 books across all genres and a vibrant online presence serving readers nationwide.</p>
+                    <p>Despite our growth, we've never lost sight of our original mission: to connect readers with stories that inspire, educate, and entertain while fostering a love of literature in our community.</p>
+                    <div class="mt-4">
+                        <a href="contact.html" class="btn btn-primary me-3">Visit Our Store</a>
+                        <a href="products.html" class="btn btn-secondary">Browse Books</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission & Values Section -->
+    <div class="container section">
+        <h2 class="section-title center">Our Mission & Values</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="mission-title">Curated Selection</h3>
+                    <p>We carefully select every book in our collection, ensuring quality and diversity across genres. Our team reads extensively to provide personalized recommendations.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="mission-title">Community Focus</h3>
+                    <p>We believe bookstores should be community hubs. We host author events, book clubs, and literary discussions to bring readers together.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="mission-title">Personal Service</h3>
+                    <p>Every customer receives personalized attention. Our knowledgeable staff takes time to understand your reading preferences and suggest perfect matches.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title center text-white">Our Core Values</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="value-title">Sustainability</h3>
+                        <p>We prioritize eco-friendly practices and support local authors and publishers to reduce our carbon footprint.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="value-title">Education</h3>
+                        <p>We believe in the power of books to educate and transform lives, offering resources for readers of all ages.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="value-title">Inclusion</h3>
+                        <p>We celebrate diverse voices and stories, ensuring our collection represents a wide range of perspectives.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p>While honoring traditional bookselling, we embrace technology to enhance the reading experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <div class="container team-section">
+        <h2 class="section-title center">Meet Our Team</h2>
+        <p class="text-center mb-5">Our passionate team of book lovers is here to help you discover your next favorite read.</p>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Sarah Johnson" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Sarah Johnson</h3>
+                        <p class="team-role">Founder & CEO</p>
+                        <p class="team-bio">Literature professor turned entrepreneur, Sarah's passion for connecting readers with great stories inspired Unique Books.</p>
+                        <div class="team-social">
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-goodreads"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Michael Chen" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Michael Chen</h3>
+                        <p class="team-role">Head of Operations</p>
+                        <p class="team-bio">With a background in business management, Michael ensures our store runs smoothly and our customers are always satisfied.</p>
+                        <div class="team-social">
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/eb/76/a4/eb76a46ab920d056b02d203ca95e9a22.jpg" 
+                         alt="Emily Rodriguez" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Emily Rodriguez</h3>
+                        <p class="team-role">Head Curator</p>
+                        <p class="team-bio">Emily reads over 100 books a year and has an incredible talent for matching readers with their perfect next read.</p>
+                        <div class="team-social">
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-goodreads"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="David Thompson" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">David Thompson</h3>
+                        <p class="team-role">Events Coordinator</p>
+                        <p class="team-bio">David brings authors and readers together through our popular book signings, readings, and literary festivals.</p>
+                        <div class="team-social">
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="team-social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years Serving Readers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Books in Collection</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Author Events Yearly</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <div class="container testimonial-section">
+        <h2 class="section-title center">What Our Readers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Unique Books isn't just a bookstore - it's my literary home. The staff recommendations are always spot on, and I've discovered so many new favorite authors here.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Jennifer Lee" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Jennifer Lee</div>
+                            <div class="author-role">Loyal Customer for 8 years</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As an author, I've done signings at many bookstores, but Unique Books stands out for their genuine love of books and their dedication to building community.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Robert Kingsley" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Robert Kingsley</div>
+                            <div class="author-role">Bestselling Author</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The children's section at Unique Books is magical! My kids look forward to story time every week, and we always leave with new books they're excited to read.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Maria Garcia" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Maria Garcia</div>
+                            <div class="author-role">Parent & Regular Visitor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Section -->
+    <div class="container">
+        <div class="community-section">
+            <h2 class="section-title center">Join Our Community</h2>
+            <p class="text-center mb-5">Become part of the Unique Books family and enjoy exclusive benefits</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="community-card">
+                        <div class="community-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <h3 class="community-title">Loyalty Program</h3>
+                        <p>Earn points with every purchase and redeem them for discounts, special editions, and exclusive merchandise.</p>
+                        <a href="#" class="btn btn-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="community-card">
+                        <div class="community-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="community-title">Book Clubs</h3>
+                        <p>Join one of our genre-specific book clubs and discuss great literature with fellow enthusiasts.</p>
+                        <a href="#" class="btn btn-primary mt-3">View Clubs</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="community-card">
+                        <div class="community-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="community-title">Events</h3>
+                        <p>Attend author signings, writing workshops, literary discussions, and our annual book festival.</p>
+                        <a href="#" class="btn btn-primary mt-3">See Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5><i class="fas fa-book-open me-2"></i>Unique Books</h5>
+            <p>
+              Your trusted online bookstore with thousands of titles across all
+              genres. We're passionate about connecting readers with their next
+              favorite book.
+            </p>
+            <div class="social-links">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="products.html" class="text-white-50">Books</a></li>
+              <li><a href="about.html" class="text-white-50">About Us</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Customer Care</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="faq.html" class="text-white-50">FAQ</a></li>
+              <li>
+                <a href="shipping.html" class="text-white-50">Shipping Info</a>
+              </li>
+              <li><a href="returns.html" class="text-white-50">Returns</a></li>
+              <li>
+                <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Book Street,
+                Abeokuta, Nigeria
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-phone me-2"></i> +234 813-4879-924
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-envelope me-2"></i> info@uniquebooks.com
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Unique Books. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end payment">
+            <img
+              src="https://i.pinimg.com/736x/de/72/b5/de72b5cd21b9c827639853f666b51b50.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/1200x/79/77/9f/79779f77d2a5aa5eca98d313c10c7f0e.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/b4/ef/fdb4efb9ec1f26dd2fac539282074f6f.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="btn btn-primary rounded-circle shadow"
+      style="
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        display: none;
+        z-index: 999;
+        font-size: 1.5rem;
+      "
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      window.addEventListener("scroll", () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+</body>
+</html>

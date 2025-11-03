@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Books - Your Online Bookstore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add to <head> in index.html -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <!-- Add Animate.css for amazing animations in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-book-open me-2"></i>Unique Books
+        </a>
+
+        <!-- Toggler (moved here for right alignment) -->
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Books Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="booksDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Non-Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Science Fiction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Fantasy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Mystery</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html"
+                    ><i class="bi bi-book"></i> Biography</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right Nav Icons -->
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="search.html"
+                ><i class="fas fa-search"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="badge badge-secondary rounded-pill cart-count"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="account.html">My Account</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="orders.html">My Orders</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Contact Us</h1>
+        <p class="page-subtitle">
+          We'd love to hear from you. Send us a message and we'll respond as
+          soon as possible.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="container contact-section">
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-lg-4 mb-5">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-info-card mb-3">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="contact-title">Visit Our Store</h3>
+            <p class="contact-detail">123 Book Street</p>
+            <p class="contact-detail">Literary City, LC 12345</p>
+            <p class="contact-detail">United States</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <h2 class="section-title">Send Us a Message</h2>
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject *</label>
+                <select class="form-control" id="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="order">Order Issue</option>
+                  <option value="shipping">Shipping Question</option>
+                  <option value="return">Return Request</option>
+                  <option value="book">Book Recommendation</option>
+                  <option value="event">Event Inquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message *</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="newsletter"
+                />
+                <label class="form-check-label" for="newsletter"
+                  >Subscribe to our newsletter for updates and promotions</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container faq-section">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-title text-center">Frequently Asked Questions</h2>
+          <p class="text-center mb-5">
+            Find quick answers to common questions about our bookstore and
+            services.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+            >
+              What are your shipping options and costs?
+            </button>
+            <div class="faq-answer collapse" id="faq1">
+              <p>We offer several shipping options to meet your needs:</p>
+              <ul>
+                <li>
+                  <strong>Standard Shipping (3-5 business days):</strong> $3.99
+                  or FREE on orders over $25
+                </li>
+                <li>
+                  <strong>Express Shipping (2 business days):</strong> $9.99
+                </li>
+                <li>
+                  <strong>Overnight Shipping (1 business day):</strong> $19.99
+                </li>
+              </ul>
+              <p>
+                All orders are processed within 24 hours during business days.
+                International shipping is also available with varying rates
+                based on destination.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+            >
+              What is your return policy?
+            </button>
+            <div class="faq-answer collapse" id="faq2">
+              <p>
+                We want you to be completely satisfied with your purchase. Our
+                return policy includes:
+              </p>
+              <ul>
+                <li>Returns are accepted within 30 days of purchase</li>
+                <li>Books must be in original condition with no damage</li>
+                <li>Original receipt or order confirmation is required</li>
+                <li>Refunds will be issued to the original payment method</li>
+                <li>
+                  Shipping costs are non-refundable unless the return is due to
+                  our error
+                </li>
+              </ul>
+              <p>
+                To initiate a return, please contact our customer service team
+                or visit our store.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+            >
+              Do you offer book recommendations?
+            </button>
+            <div class="faq-answer collapse" id="faq3">
+              <p>
+                Absolutely! We love helping readers discover their next favorite
+                book. You can get personalized recommendations through:
+              </p>
+              <ul>
+                <li>
+                  Visiting our store and speaking with our knowledgeable staff
+                </li>
+                <li>Using our online recommendation tool on our website</li>
+                <li>
+                  Emailing our book experts at
+                  <a href="mailto:recommendations@bookhaven.com"
+                    >recommendations@bookhaven.com</a
+                  >
+                </li>
+                <li>Joining our monthly book subscription service</li>
+              </ul>
+              <p>
+                We consider your reading preferences, favorite genres, and past
+                purchases to provide tailored suggestions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4"
+            >
+              Do you host author events or book clubs?
+            </button>
+            <div class="faq-answer collapse" id="faq4">
+              <p>
+                Yes, we're passionate about building a literary community! We
+                regularly host:
+              </p>
+              <ul>
+                <li>
+                  <strong>Author Signings:</strong> Meet your favorite authors
+                  and get books signed
+                </li>
+                <li>
+                  <strong>Book Clubs:</strong> We have several genre-specific
+                  book clubs that meet monthly
+                </li>
+                <li>
+                  <strong>Writing Workshops:</strong> Improve your writing
+                  skills with our workshops
+                </li>
+                <li>
+                  <strong>Children's Story Time:</strong> Weekly readings for
+                  young readers
+                </li>
+                <li>
+                  <strong>Literary Discussions:</strong> Engage in thoughtful
+                  conversations about books
+                </li>
+              </ul>
+              <p>
+                Check our events calendar on our website or sign up for our
+                newsletter to stay informed about upcoming events.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5"
+            >
+              Can I special order a book that's not in stock?
+            </button>
+            <div class="faq-answer collapse" id="faq5">
+              <p>
+                Definitely! If we don't have a book in stock, we can usually
+                order it for you. Here's how it works:
+              </p>
+              <ul>
+                <li>
+                  Contact us with the book title, author, and format (hardcover,
+                  paperback, etc.)
+                </li>
+                <li>We'll check availability with our distributors</li>
+                <li>Most special orders arrive within 5-10 business days</li>
+                <li>We'll notify you when your book arrives</li>
+                <li>Payment is required when the book is ordered</li>
+              </ul>
+              <p>
+                There's no extra fee for special orders, and you'll pay the same
+                price as if the book was in stock. Some rare or out-of-print
+                titles may take longer to source.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq6"
+            >
+              Do you buy used books?
+            </button>
+            <div class="faq-answer collapse" id="faq6">
+              <p>
+                Yes, we have a used book section and we're always looking to add
+                quality pre-owned books to our collection. Our buying process:
+              </p>
+              <ul>
+                <li>
+                  We accept books during store hours (please call ahead for
+                  large collections)
+                </li>
+                <li>
+                  We evaluate books based on condition, demand, and edition
+                </li>
+                <li>
+                  Payment options include store credit (higher value) or cash
+                </li>
+                <li>
+                  We cannot accept books that are damaged, have odors, or are
+                  outdated textbooks
+                </li>
+              </ul>
+              <p>
+                For a preliminary evaluation, you can email photos of your books
+                to
+                <a href="mailto:usedbooks@bookhaven.com"
+                  >usedbooks@bookhaven.com</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5><i class="fas fa-book-open me-2"></i>Unique Books</h5>
+            <p>
+              Your trusted online bookstore with thousands of titles across all
+              genres. We're passionate about connecting readers with their next
+              favorite book.
+            </p>
+            <div class="social-links">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="products.html" class="text-white-50">Books</a></li>
+              <li><a href="about.html" class="text-white-50">About Us</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Customer Care</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="faq.html" class="text-white-50">FAQ</a></li>
+              <li>
+                <a href="shipping.html" class="text-white-50">Shipping Info</a>
+              </li>
+              <li><a href="returns.html" class="text-white-50">Returns</a></li>
+              <li>
+                <a href="privacy.html" class="text-white-50">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Book Street,
+                Abeokuta, Nigeria
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-phone me-2"></i> +234 813-4879-924
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-envelope me-2"></i> info@uniquebooks.com
+              </li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Unique Books. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end payment">
+            <img
+              src="https://i.pinimg.com/736x/de/72/b5/de72b5cd21b9c827639853f666b51b50.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/1200x/79/77/9f/79779f77d2a5aa5eca98d313c10c7f0e.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/b4/ef/fdb4efb9ec1f26dd2fac539282074f6f.jpg"
+              alt="Payment Method"
+              class="me-2"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="btn btn-primary rounded-circle shadow"
+      style="
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        display: none;
+        z-index: 999;
+        font-size: 1.5rem;
+      "
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      window.addEventListener("scroll", () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
