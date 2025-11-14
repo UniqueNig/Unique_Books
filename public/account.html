@@ -34,7 +34,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container d-flex justify-content-between align-items-center">
@@ -70,7 +70,7 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="#"
+                href="products.html"
                 id="booksDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -169,554 +169,811 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h1 class="display-5 fw-bold">My Account</h1>
-                    <p class="lead">Manage your profile, orders, and reading preferences</p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <a href="products.html" class="btn btn-outline-primary">
-                        <i class="fas fa-book me-2"></i> Continue Shopping
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="display-5 fw-bold">My Account</h1>
+            <p class="lead">
+              Manage your profile, orders, and reading preferences
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="products.html" class="btn btn-outline-primary">
+              <i class="fas fa-book me-2"></i> Continue Shopping
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Dashboard Content -->
     <div class="container dashboard-container">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3">
-                <div class="sidebar">
-                    <div class="user-profile">
-                        <img id="userAvatar" class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
-                            
-                        <h3 class="user-name" id="userName"></h3>
-                        <p class="user-email" id="email" ></p>
-                    </div>
-                    
-                    <ul class="sidebar-nav">
-                        <li><a href="#" class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                        <li><a href="#" data-tab="orders"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
-                        <li><a href="#" data-tab="wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
-                        <li><a href="#" data-tab="reading-lists"><i class="fas fa-bookmark"></i> Reading Lists</a></li>
-                        <li><a href="#" data-tab="preferences"><i class="fas fa-cog"></i> Preferences</a></li>
-                        <li><a href="#" data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
-                        <li><a href="#" data-tab="profile"><i class="fas fa-user-edit"></i> Edit Profile</a></li>
-                        <li><a href="#" id="signOut" data-tab="logout"><i class="fas fa-right-from-bracket"></i> Log Out</a></li>
-                    </ul>
-                </div>
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="sidebar">
+            <div class="user-profile">
+              <img
+                id="userAvatar"
+                class="img-fluid rounded-circle"
+                style="width: 100px; height: 100px; object-fit: cover"
+              />
+
+              <h3 class="user-name" id="userName"></h3>
+              <p class="user-email" id="email"></p>
             </div>
-            
-            <!-- Main Content -->
-            <div class="col-lg-9">
-                <!-- Dashboard Tab -->
-                <div class="tab-content active" id="dashboard-tab">
-                    <div class="welcome-card">
-                        <h2 class="welcome-title">Welcome back, <span id="firstName"></span>!</h2>
-                        <p>You have 2 unread recommendations based on your reading history. Continue your literary journey with us!</p>
-                    </div>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-shopping-bag"></i>
-                            </div>
-                            <div class="stat-number">7</div>
-                            <div class="stat-label">Total Orders</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="stat-number">12</div>
-                            <div class="stat-label">Wishlist Items</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <div class="stat-number">23</div>
-                            <div class="stat-label">Books Read</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="stat-number">15</div>
-                            <div class="stat-label">Reviews Written</div>
-                        </div>
-                    </div>
-                    
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Recent Orders</h3>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div>
-                                    <div class="order-id">Order #BH-7842</div>
-                                    <div class="order-date">Placed on March 12, 2023</div>
-                                </div>
-                                <div class="order-status status-delivered">Delivered</div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="The Silent Patient" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">The Silent Patient</div>
-                                    <div class="order-item-author">Alex Michaelides</div>
-                                    <div class="order-item-meta">Qty: 1 • $12.99</div>
-                                </div>
-                            </div>
-                            <div class="order-footer">
-                                <div class="order-total">Total: $16.98</div>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
-                                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div>
-                                    <div class="order-id">Order #BH-7791</div>
-                                    <div class="order-date">Placed on February 28, 2023</div>
-                                </div>
-                                <div class="order-status status-shipped">Shipped</div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Where the Crawdads Sing" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">Where the Crawdads Sing</div>
-                                    <div class="order-item-author">Delia Owens</div>
-                                    <div class="order-item-meta">Qty: 1 • $14.99</div>
-                                </div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="The Midnight Library" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">The Midnight Library</div>
-                                    <div class="order-item-author">Matt Haig</div>
-                                    <div class="order-item-meta">Qty: 1 • $13.49</div>
-                                </div>
-                            </div>
-                            <div class="order-footer">
-                                <div class="order-total">Total: $32.47</div>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
-                                    <button class="btn btn-primary btn-sm ms-2">Track Order</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center mt-4">
-                            <a href="#" class="btn btn-outline-primary" data-tab="orders">View All Orders</a>
-                        </div>
-                    </div>
-                    
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Recommended For You</h3>
-                        <div class="wishlist-grid">
-                            <!-- Book 1 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Atomic Habits" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">Atomic Habits</div>
-                                    <div class="wishlist-author">James Clear</div>
-                                    <div class="wishlist-price">$11.99</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="far fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Book 2 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Educated" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">Educated</div>
-                                    <div class="wishlist-author">Tara Westover</div>
-                                    <div class="wishlist-price">$13.49</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="far fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Orders Tab -->
-                <div class="tab-content" id="orders-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Order History</h3>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div>
-                                    <div class="order-id">Order #BH-7842</div>
-                                    <div class="order-date">Placed on March 12, 2023</div>
-                                </div>
-                                <div class="order-status status-delivered">Delivered</div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="The Silent Patient" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">The Silent Patient</div>
-                                    <div class="order-item-author">Alex Michaelides</div>
-                                    <div class="order-item-meta">Qty: 1 • $12.99</div>
-                                </div>
-                            </div>
-                            <div class="order-footer">
-                                <div class="order-total">Total: $16.98</div>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
-                                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div>
-                                    <div class="order-id">Order #BH-7791</div>
-                                    <div class="order-date">Placed on February 28, 2023</div>
-                                </div>
-                                <div class="order-status status-shipped">Shipped</div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Where the Crawdads Sing" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">Where the Crawdads Sing</div>
-                                    <div class="order-item-author">Delia Owens</div>
-                                    <div class="order-item-meta">Qty: 1 • $14.99</div>
-                                </div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="The Midnight Library" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">The Midnight Library</div>
-                                    <div class="order-item-author">Matt Haig</div>
-                                    <div class="order-item-meta">Qty: 1 • $13.49</div>
-                                </div>
-                            </div>
-                            <div class="order-footer">
-                                <div class="order-total">Total: $32.47</div>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
-                                    <button class="btn btn-primary btn-sm ms-2">Track Order</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="order-card">
-                            <div class="order-header">
-                                <div>
-                                    <div class="order-id">Order #BH-7654</div>
-                                    <div class="order-date">Placed on January 15, 2023</div>
-                                </div>
-                                <div class="order-status status-delivered">Delivered</div>
-                            </div>
-                            <div class="order-items">
-                                <img src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Project Hail Mary" class="order-item-image">
-                                <div class="order-item-details">
-                                    <div class="order-item-title">Project Hail Mary</div>
-                                    <div class="order-item-author">Andy Weir</div>
-                                    <div class="order-item-meta">Qty: 1 • $16.99</div>
-                                </div>
-                            </div>
-                            <div class="order-footer">
-                                <div class="order-total">Total: $20.98</div>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
-                                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Wishlist Tab -->
-                <div class="tab-content" id="wishlist-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">My Wishlist</h3>
-                        
-                        <div class="wishlist-grid">
-                            <!-- Book 1 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Atomic Habits" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">Atomic Habits</div>
-                                    <div class="wishlist-author">James Clear</div>
-                                    <div class="wishlist-price">$11.99</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="fas fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Book 2 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Educated" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">Educated</div>
-                                    <div class="wishlist-author">Tara Westover</div>
-                                    <div class="wishlist-price">$13.49</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="fas fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Book 3 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1531346680769-a1d79b57de2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="The Hobbit" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">The Hobbit</div>
-                                    <div class="wishlist-author">J.R.R. Tolkien</div>
-                                    <div class="wishlist-price">$10.99</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="fas fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Book 4 -->
-                            <div class="wishlist-card">
-                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                                     alt="Dune" class="wishlist-image">
-                                <div class="wishlist-details">
-                                    <div class="wishlist-title">Dune</div>
-                                    <div class="wishlist-author">Frank Herbert</div>
-                                    <div class="wishlist-price">$14.99</div>
-                                    <div class="wishlist-actions">
-                                        <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
-                                        <button class="btn btn-outline-primary btn-sm"><i class="fas fa-heart"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Reading Lists Tab -->
-                <div class="tab-content" id="reading-lists-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">My Reading Lists</h3>
-                        <div class="empty-state">
-                            <div class="empty-icon">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <h4>No reading lists yet</h4>
-                            <p>Create your first reading list to organize books you want to read.</p>
-                            <button class="btn btn-primary mt-3">Create Reading List</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Preferences Tab -->
-                <div class="tab-content" id="preferences-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Reading Preferences</h3>
-                        <p class="mb-4">Tell us about your reading preferences to get better book recommendations.</p>
-                        
-                        <div class="mb-4">
-                            <h5 class="mb-3">Favorite Genres</h5>
-                            <div class="reading-preferences">
-                                <div class="preference-card active">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-dragon"></i>
-                                    </div>
-                                    <div class="preference-name">Fantasy</div>
-                                </div>
-                                <div class="preference-card">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-user-astronaut"></i>
-                                    </div>
-                                    <div class="preference-name">Science Fiction</div>
-                                </div>
-                                <div class="preference-card active">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                    <div class="preference-name">Mystery</div>
-                                </div>
-                                <div class="preference-card">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                    <div class="preference-name">Romance</div>
-                                </div>
-                                <div class="preference-card">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="preference-name">Non-Fiction</div>
-                                </div>
-                                <div class="preference-card active">
-                                    <div class="preference-icon">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="preference-name">Biography</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h5 class="mb-3">Notification Preferences</h5>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="notif-new-releases" checked>
-                                <label class="form-check-label" for="notif-new-releases">
-                                    New releases from favorite authors
-                                </label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="notif-sales" checked>
-                                <label class="form-check-label" for="notif-sales">
-                                    Special offers and sales
-                                </label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="notif-recommendations">
-                                <label class="form-check-label" for="notif-recommendations">
-                                    Personalized book recommendations
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="notif-newsletter" checked>
-                                <label class="form-check-label" for="notif-newsletter">
-                                    Monthly newsletter
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <button class="btn btn-primary">Save Preferences</button>
-                    </div>
-                </div>
-                
-                <!-- Addresses Tab -->
-                <div class="tab-content" id="addresses-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Saved Addresses</h3>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-start mb-3">
-                                            <h5 class="card-title">Home Address</h5>
-                                            <span class="badge bg-primary">Default</span>
-                                        </div>
-                                        <p class="card-text">
-                                            Sarah Johnson<br>
-                                            123 Book Street<br>
-                                            Literary City, LC 12345<br>
-                                            United States
-                                        </p>
-                                        <div class="mt-3">
-                                            <button class="btn btn-outline-primary btn-sm">Edit</button>
-                                            <button class="btn btn-outline-secondary btn-sm ms-2">Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-3">Work Address</h5>
-                                        <p class="card-text">
-                                            Sarah Johnson<br>
-                                            456 Office Plaza, Suite 201<br>
-                                            Business District, BD 54321<br>
-                                            United States
-                                        </p>
-                                        <div class="mt-3">
-                                            <button class="btn btn-outline-primary btn-sm">Edit</button>
-                                            <button class="btn btn-outline-secondary btn-sm ms-2">Remove</button>
-                                            <button class="btn btn-primary btn-sm ms-2">Set as Default</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="btn btn-primary">Add New Address</button>
-                    </div>
-                </div>
-                
-                <!-- Profile Tab -->
-                <div class="tab-content" id="profile-tab">
-                    <div class="dashboard-content">
-                        <h3 class="section-title">Edit Profile</h3>
-                        
-                        <form id="profileForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" value="Sarah" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" value="Johnson" required>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" value="sarah.johnson@example.com" required>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" value="(123) 456-7890">
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="birthdate" class="form-label">Date of Birth</label>
-                                <input type="date" class="form-control" id="birthdate" value="1990-05-15">
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label class="form-label">Profile Picture</label>
-                                <div class="d-flex align-items-center">
-                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                                         alt="Current profile" class="user-avatar me-3" style="width: 80px; height: 80px;">
-                                    <div>
-                                        <input type="file" class="form-control" id="profilePicture">
-                                        <div class="form-text">Recommended size: 200x200 pixels</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
+            <ul class="sidebar-nav">
+              <li>
+                <a href="#" class="active" data-tab="dashboard"
+                  ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="orders"
+                  ><i class="fas fa-shopping-bag"></i> My Orders</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="wishlist"
+                  ><i class="fas fa-heart"></i> Wishlist</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="reading-lists"
+                  ><i class="fas fa-bookmark"></i> Reading Lists</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="preferences"
+                  ><i class="fas fa-cog"></i> Preferences</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="addresses"
+                  ><i class="fas fa-map-marker-alt"></i> Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="profile"
+                  ><i class="fas fa-user-edit"></i> Edit Profile</a
+                >
+              </li>
+              <li>
+                <a href="#" id="signOut" data-tab="logout"
+                  ><i class="fas fa-right-from-bracket"></i> Log Out</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-9">
+          <!-- Dashboard Tab -->
+          <div class="tab-content active" id="dashboard-tab">
+            <div class="welcome-card">
+              <h2 class="welcome-title">
+                Welcome back, <span id="firstName"></span>!
+              </h2>
+              <p>
+                You have 2 unread recommendations based on your reading history.
+                Continue your literary journey with us!
+              </p>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Total Orders</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Wishlist Items</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Books Read</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Reviews Written</div>
+              </div>
+            </div>
+
+            <div class="dashboard-content">
+              <h3 class="section-title">Recent Orders</h3>
+
+              <!-- <div class="order-card">
+                            <div class="order-header">
+                                <div>
+                                    <div class="order-id">Order #BH-7842</div>
+                                    <div class="order-date">Placed on March 12, 2023</div>
+                                </div>
+                                <div class="order-status status-delivered">Delivered</div>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                     alt="The Silent Patient" class="order-item-image">
+                                <div class="order-item-details">
+                                    <div class="order-item-title">The Silent Patient</div>
+                                    <div class="order-item-author">Alex Michaelides</div>
+                                    <div class="order-item-meta">Qty: 1 • $12.99</div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">Total: $16.98</div>
+                                <div>
+                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
+                                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div>
+                                    <div class="order-id">Order #BH-7791</div>
+                                    <div class="order-date">Placed on February 28, 2023</div>
+                                </div>
+                                <div class="order-status status-shipped">Shipped</div>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                     alt="Where the Crawdads Sing" class="order-item-image">
+                                <div class="order-item-details">
+                                    <div class="order-item-title">Where the Crawdads Sing</div>
+                                    <div class="order-item-author">Delia Owens</div>
+                                    <div class="order-item-meta">Qty: 1 • $14.99</div>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                     alt="The Midnight Library" class="order-item-image">
+                                <div class="order-item-details">
+                                    <div class="order-item-title">The Midnight Library</div>
+                                    <div class="order-item-author">Matt Haig</div>
+                                    <div class="order-item-meta">Qty: 1 • $13.49</div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">Total: $32.47</div>
+                                <div>
+                                    <button class="btn btn-outline-primary btn-sm">View Details</button>
+                                    <button class="btn btn-primary btn-sm ms-2">Track Order</button>
+                                </div>
+                            </div>
+                        </div> -->
+
+              <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary" data-tab="orders"
+                  >View All Orders</a
+                >
+              </div>
+            </div>
+
+            <div class="dashboard-content">
+              <h3 class="section-title">You can also add</h3>
+              <!-- Books Grid -->
+              <div class="row" id="books-grid">
+                <!-- Book 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="card book-card product" id="book-card">
+                    <div class="position-relative">
+                      <img
+                        src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top book-cover"
+                        alt="The Silent Patient"
+                      />
+                      <span class="discount-badge">20% OFF</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title productName">The Silent Patient</h5>
+                      <p class="card-text text-muted">Alex Michaelides</p>
+                      <div class="rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="ms-1 text-muted">(4.5)</span>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-auto"
+                      >
+                        <div>
+                          <span class="price productPrice">$12.99</span>
+                          <span class="old-price">$16.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="1">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="card book-card product" id="book-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                      class="card-img-top book-cover"
+                      alt="Where the Crawdads Sing"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title productName">
+                        Where the Crawdads Sing
+                      </h5>
+                      <p class="card-text text-muted">Delia Owens</p>
+                      <div class="rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="ms-1 text-muted">(4.0)</span>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-auto"
+                      >
+                        <div>
+                          <span class="price productPrice">$14.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="2">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="card book-card product" id="book-card">
+                    <div class="position-relative">
+                      <img
+                        src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top book-cover"
+                        alt="The Midnight Library"
+                      />
+                      <span class="discount-badge">BESTSELLER</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title productName">
+                        The Midnight Library
+                      </h5>
+                      <p class="card-text text-muted">Matt Haig</p>
+                      <div class="rating mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="ms-1 text-muted">(5.0)</span>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-auto"
+                      >
+                        <div>
+                          <span class="price productPrice">$13.49</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="3">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orders Tab -->
+          <div class="tab-content" id="orders-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">Order History</h3>
+
+              <div class="order-card">
+                <div class="order-header">
+                  <div>
+                    <div class="order-id">Order #BH-7842</div>
+                    <div class="order-date">Placed on March 12, 2023</div>
+                  </div>
+                  <div class="order-status status-delivered">Delivered</div>
+                </div>
+                <div class="order-items">
+                  <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="The Silent Patient"
+                    class="order-item-image"
+                  />
+                  <div class="order-item-details">
+                    <div class="order-item-title">The Silent Patient</div>
+                    <div class="order-item-author">Alex Michaelides</div>
+                    <div class="order-item-meta">Qty: 1 • $12.99</div>
+                  </div>
+                </div>
+                <div class="order-footer">
+                  <div class="order-total">Total: $16.98</div>
+                  <div>
+                    <button class="btn btn-outline-primary btn-sm">
+                      View Details
+                    </button>
+                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-card">
+                <div class="order-header">
+                  <div>
+                    <div class="order-id">Order #BH-7791</div>
+                    <div class="order-date">Placed on February 28, 2023</div>
+                  </div>
+                  <div class="order-status status-shipped">Shipped</div>
+                </div>
+                <div class="order-items">
+                  <img
+                    src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="Where the Crawdads Sing"
+                    class="order-item-image"
+                  />
+                  <div class="order-item-details">
+                    <div class="order-item-title">Where the Crawdads Sing</div>
+                    <div class="order-item-author">Delia Owens</div>
+                    <div class="order-item-meta">Qty: 1 • $14.99</div>
+                  </div>
+                </div>
+                <div class="order-items">
+                  <img
+                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="The Midnight Library"
+                    class="order-item-image"
+                  />
+                  <div class="order-item-details">
+                    <div class="order-item-title">The Midnight Library</div>
+                    <div class="order-item-author">Matt Haig</div>
+                    <div class="order-item-meta">Qty: 1 • $13.49</div>
+                  </div>
+                </div>
+                <div class="order-footer">
+                  <div class="order-total">Total: $32.47</div>
+                  <div>
+                    <button class="btn btn-outline-primary btn-sm">
+                      View Details
+                    </button>
+                    <button class="btn btn-primary btn-sm ms-2">
+                      Track Order
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-card">
+                <div class="order-header">
+                  <div>
+                    <div class="order-id">Order #BH-7654</div>
+                    <div class="order-date">Placed on January 15, 2023</div>
+                  </div>
+                  <div class="order-status status-delivered">Delivered</div>
+                </div>
+                <div class="order-items">
+                  <img
+                    src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="Project Hail Mary"
+                    class="order-item-image"
+                  />
+                  <div class="order-item-details">
+                    <div class="order-item-title">Project Hail Mary</div>
+                    <div class="order-item-author">Andy Weir</div>
+                    <div class="order-item-meta">Qty: 1 • $16.99</div>
+                  </div>
+                </div>
+                <div class="order-footer">
+                  <div class="order-total">Total: $20.98</div>
+                  <div>
+                    <button class="btn btn-outline-primary btn-sm">
+                      View Details
+                    </button>
+                    <button class="btn btn-primary btn-sm ms-2">Reorder</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Tab -->
+          <div class="tab-content" id="wishlist-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">My Wishlist</h3>
+
+              <div class="wishlist-grid">
+                <!-- Book 1 -->
+                <div class="wishlist-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="Atomic Habits"
+                    class="wishlist-image"
+                  />
+                  <div class="wishlist-details">
+                    <div class="wishlist-title">Atomic Habits</div>
+                    <div class="wishlist-author">James Clear</div>
+                    <div class="wishlist-price">$11.99</div>
+                    <div class="wishlist-actions">
+                      <button class="btn btn-primary btn-sm add-to-cart">
+                        Add to Cart
+                      </button>
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="wishlist-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="Educated"
+                    class="wishlist-image"
+                  />
+                  <div class="wishlist-details">
+                    <div class="wishlist-title">Educated</div>
+                    <div class="wishlist-author">Tara Westover</div>
+                    <div class="wishlist-price">$13.49</div>
+                    <div class="wishlist-actions">
+                      <button class="btn btn-primary btn-sm add-to-cart">
+                        Add to Cart
+                      </button>
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="wishlist-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1531346680769-a1d79b57de2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="The Hobbit"
+                    class="wishlist-image"
+                  />
+                  <div class="wishlist-details">
+                    <div class="wishlist-title">The Hobbit</div>
+                    <div class="wishlist-author">J.R.R. Tolkien</div>
+                    <div class="wishlist-price">$10.99</div>
+                    <div class="wishlist-actions">
+                      <button class="btn btn-primary btn-sm add-to-cart">
+                        Add to Cart
+                      </button>
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book 4 -->
+                <div class="wishlist-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="Dune"
+                    class="wishlist-image"
+                  />
+                  <div class="wishlist-details">
+                    <div class="wishlist-title">Dune</div>
+                    <div class="wishlist-author">Frank Herbert</div>
+                    <div class="wishlist-price">$14.99</div>
+                    <div class="wishlist-actions">
+                      <button class="btn btn-primary btn-sm add-to-cart">
+                        Add to Cart
+                      </button>
+                      <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reading Lists Tab -->
+          <div class="tab-content" id="reading-lists-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">My Reading Lists</h3>
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <h4>No reading lists yet</h4>
+                <p>
+                  Create your first reading list to organize books you want to
+                  read.
+                </p>
+                <button class="btn btn-primary mt-3">
+                  Create Reading List
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences Tab -->
+          <div class="tab-content" id="preferences-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">Reading Preferences</h3>
+              <p class="mb-4">
+                Tell us about your reading preferences to get better book
+                recommendations.
+              </p>
+
+              <div class="mb-4">
+                <h5 class="mb-3">Favorite Genres</h5>
+                <div class="reading-preferences">
+                  <div class="preference-card active">
+                    <div class="preference-icon">
+                      <i class="fas fa-dragon"></i>
+                    </div>
+                    <div class="preference-name">Fantasy</div>
+                  </div>
+                  <div class="preference-card">
+                    <div class="preference-icon">
+                      <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="preference-name">Science Fiction</div>
+                  </div>
+                  <div class="preference-card active">
+                    <div class="preference-icon">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <div class="preference-name">Mystery</div>
+                  </div>
+                  <div class="preference-card">
+                    <div class="preference-icon">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="preference-name">Romance</div>
+                  </div>
+                  <div class="preference-card">
+                    <div class="preference-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="preference-name">Non-Fiction</div>
+                  </div>
+                  <div class="preference-card active">
+                    <div class="preference-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="preference-name">Biography</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <h5 class="mb-3">Notification Preferences</h5>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="notif-new-releases"
+                    checked
+                  />
+                  <label class="form-check-label" for="notif-new-releases">
+                    New releases from favorite authors
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="notif-sales"
+                    checked
+                  />
+                  <label class="form-check-label" for="notif-sales">
+                    Special offers and sales
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="notif-recommendations"
+                  />
+                  <label class="form-check-label" for="notif-recommendations">
+                    Personalized book recommendations
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="notif-newsletter"
+                    checked
+                  />
+                  <label class="form-check-label" for="notif-newsletter">
+                    Monthly newsletter
+                  </label>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">Save Preferences</button>
+            </div>
+          </div>
+
+          <!-- Addresses Tab -->
+          <div class="tab-content" id="addresses-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">Saved Addresses</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-3"
+                      >
+                        <h5 class="card-title">Home Address</h5>
+                        <span class="badge bg-primary">Default</span>
+                      </div>
+                      <p class="card-text">
+                        Sarah Johnson<br />
+                        123 Book Street<br />
+                        Literary City, LC 12345<br />
+                        United States
+                      </p>
+                      <div class="mt-3">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Edit
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm ms-2">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title mb-3">Work Address</h5>
+                      <p class="card-text">
+                        Sarah Johnson<br />
+                        456 Office Plaza, Suite 201<br />
+                        Business District, BD 54321<br />
+                        United States
+                      </p>
+                      <div class="mt-3">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Edit
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm ms-2">
+                          Remove
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-2">
+                          Set as Default
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">Add New Address</button>
+            </div>
+          </div>
+
+          <!-- Profile Tab -->
+          <div class="tab-content" id="profile-tab">
+            <div class="dashboard-content">
+              <h3 class="section-title">Edit Profile</h3>
+
+              <form id="profileForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="firstName" class="form-label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        value="Sarah"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        value="Johnson"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    value="sarah.johnson@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    value="(123) 456-7890"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="birthdate" class="form-label"
+                    >Date of Birth</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="birthdate"
+                    value="1990-05-15"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Profile Picture</label>
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                      alt="Current profile"
+                      class="user-avatar me-3"
+                      style="width: 80px; height: 80px"
+                    />
+                    <div>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="profilePicture"
+                      />
+                      <div class="form-text">
+                        Recommended size: 200x200 pixels
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Save Changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -805,7 +1062,10 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-     <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/product.js"></script>
+
     <script type="module" src="assets/js/account.js"></script>
-</body>
-</html>`
+  </body>
+</html>
+`

@@ -70,7 +70,7 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="#"
+                href="products.html"
                 id="booksDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -239,54 +239,6 @@
             </div> -->
 
             <div id="cartContainer" class="cart-list"></div>
-
-
-
-          </div>
-
-          <!-- Saved for Later Section -->
-          <div class="saved-items">
-            <h3 class="saved-title">Saved For Later (2 items)</h3>
-
-            <!-- Saved Item 1 -->
-            <div class="saved-item">
-              <img
-                src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="Atomic Habits"
-                class="saved-item-image"
-              />
-              <div class="saved-item-details">
-                <h4 class="saved-item-title">Atomic Habits</h4>
-                <p class="saved-item-author">by James Clear</p>
-                <div class="saved-item-price">$11.99</div>
-              </div>
-              <div class="saved-item-actions">
-                <button class="move-to-cart-btn" data-id="5">
-                  Move to Cart
-                </button>
-                <button class="remove-saved-btn" data-id="5">Remove</button>
-              </div>
-            </div>
-
-            <!-- Saved Item 2 -->
-            <div class="saved-item">
-              <img
-                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="Educated"
-                class="saved-item-image"
-              />
-              <div class="saved-item-details">
-                <h4 class="saved-item-title">Educated</h4>
-                <p class="saved-item-author">by Tara Westover</p>
-                <div class="saved-item-price">$13.49</div>
-              </div>
-              <div class="saved-item-actions">
-                <button class="move-to-cart-btn" data-id="6">
-                  Move to Cart
-                </button>
-                <button class="remove-saved-btn" data-id="6">Remove</button>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -296,30 +248,35 @@
             <h3 class="summary-title">Order Summary</h3>
 
             <div class="summary-row">
-              <span class="summary-label">Subtotal (3 items)</span>
-              <span class="summary-value" id="subtotal">$55.46</span>
+              <span class="summary-label"
+                >Subtotal (<span class="cart-count">0</span> items)</span
+              >
+              <span class="summary-value productPrice" id="subtotal"></span>
             </div>
 
             <div class="summary-row">
               <span class="summary-label">Shipping</span>
-              <span class="summary-value" id="shipping">$3.99</span>
+              <span class="summary-value" id="shipping"></span>
             </div>
 
             <div class="summary-row">
-              <span class="summary-label">Tax</span>
-              <span class="summary-value" id="tax">$4.43</span>
+              <span class="summary-label">Tax 7.5%</span>
+              <span class="summary-value" id="tax"></span>
             </div>
+
+            <!-- <div class="summary-row">
+              <span class="summary-label">Quantity</span>
+              <span class="summary-value" id="quantity"></span>
+            </div> -->
 
             <div class="summary-row">
               <span class="summary-label">Discount</span>
-              <span class="summary-value text-success" id="discount"
-                >-$4.00</span
-              >
+              <span class="summary-value text-success" id="discount"></span>
             </div>
 
             <div class="summary-row summary-total">
               <span>Total</span>
-              <span id="total">$59.88</span>
+              <span id="total"></span>
             </div>
             <a href="checkout.html">
               <button class="btn btn-secondary" id="checkout-btn">
@@ -447,5 +404,6 @@
     <!-- Custom JS -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/product.js"></script>
   </body>
 </html>

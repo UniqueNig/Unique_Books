@@ -174,7 +174,7 @@ document.getElementById("google").addEventListener("click", () => {
 
       set(userRef, userInfo).then(() => {
         showToast("Success", "Signed Up Successfully!", "success");
-        setTimeout(() => (location.href = "login.html"), 2000);
+        setTimeout(() => (location.href = "account.html"), 2000);
       });
     })
     .catch((error) => {
